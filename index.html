@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Elétrico Estrela | Energia e Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        display: ['Syne', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        red: '#E53935',
+                        'red-dark': '#B71C1C',
+                        charcoal: '#121212',
+                        zinc: '#27272A',
+                        cloud: '#F4F4F5'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #121212; color: #F4F4F5; }
+        
+        .floating-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+            background: linear-gradient(to top, rgba(18, 18, 18, 1) 40%, rgba(18, 18, 18, 0));
+            z-index: 50;
+        }
+        .floating-bar.show { transform: translateY(0); }
+        
+        .angled-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="w-full absolute top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="ph-fill ph-star text-red text-3xl"></i>
+                <span class="font-display font-extrabold text-2xl uppercase tracking-tighter">Estrela</span>
+            </div>
+            <nav class="hidden md:flex gap-8 font-medium text-sm text-cloud/70 hover:text-cloud">
+                <a href="#solucoes" class="hover:text-red transition-colors uppercase tracking-widest">Soluções</a>
+                <a href="#tecnologia" class="hover:text-red transition-colors uppercase tracking-widest">Tecnologia</a>
+                <a href="#feedback" class="hover:text-red transition-colors uppercase tracking-widest">Avaliações</a>
+                <a href="#local" class="hover:text-red transition-colors uppercase tracking-widest">Endereço</a>
+            </nav>
+            <a href="https://wa.me/551634157306" class="hidden md:inline-flex items-center justify-center bg-red text-white px-6 py-2 font-display font-bold uppercase hover:bg-red-dark transition-colors skew-x-[-10deg]">
+                <span class="skew-x-[10deg]">Contato Rápido</span>
+            </a>
+            <button class="md:hidden text-red text-3xl"><i class="ph ph-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-[100dvh] pt-32 pb-20 flex items-center bg-zinc angled-bg overflow-hidden">
+        <div class="absolute right-0 top-0 w-full md:w-3/5 h-full z-0">
+            <img src="https://images.unsplash.com/photo-1503375894025-05e83921b712?auto=format&fit=crop&q=80&w=1200" alt="Carro em movimento" class="w-full h-full object-cover mix-blend-luminosity opacity-40 grayscale" />
+            <div class="absolute inset-0 bg-gradient-to-r from-zinc to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10">
+            <div class="max-w-xl">
+                <div class="text-red font-bold uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
+                    <div class="w-8 h-[2px] bg-red"></div> Auto Elétrica
+                </div>
+                <h1 class="font-display font-extrabold text-5xl md:text-7xl uppercase leading-[0.95] mb-6">
+                    A Faísca <br/>Que Faltava <br/><span class="text-red">No Seu Motor.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-cloud/70 mb-10 leading-relaxed font-medium">
+                    Diagnóstico elétrico com precisão, agilidade e alta performance no Parque Santa Felícia, São Carlos.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/551634157306" class="bg-red text-white px-8 py-4 font-display font-bold uppercase text-lg hover:bg-white hover:text-red transition-colors skew-x-[-10deg] shadow-[8px_8px_0px_#B71C1C]">
+                        <span class="skew-x-[10deg] block">(16) 3415-7306</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre / Tecnologia -->
+    <section id="tecnologia" class="py-24 px-4 md:px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl uppercase mb-8">Performance Garantida.</h2>
+            <p class="text-xl text-cloud/60 leading-relaxed mb-16">
+                A Auto Elétrico Estrela trabalha com o que há de mais avançado em diagnóstico veicular. Não trocamos peças por tentativa e erro: localizamos o problema real e fornecemos uma solução rápida para que você volte para a estrada com segurança.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-zinc border-l-4 border-red">
+                    <i class="ph-bold ph-lightning text-4xl text-red mb-4"></i>
+                    <h3 class="font-display font-bold text-xl uppercase mb-2">Resposta Rápida</h3>
+                    <p class="text-sm text-cloud/60">Atendimento ágil para solucionar panes elétricas e troca de baterias na hora.</p>
+                </div>
+                <div class="p-8 bg-zinc border-l-4 border-red">
+                    <i class="ph-bold ph-cpu text-4xl text-red mb-4"></i>
+                    <h3 class="font-display font-bold text-xl uppercase mb-2">Scanners OEM</h3>
+                    <p class="text-sm text-cloud/60">Tecnologia compatível com as principais montadoras nacionais e importadas.</p>
+                </div>
+                <div class="p-8 bg-zinc border-l-4 border-red">
+                    <i class="ph-bold ph-wrench text-4xl text-red mb-4"></i>
+                    <h3 class="font-display font-bold text-xl uppercase mb-2">Peças Premium</h3>
+                    <p class="text-sm text-cloud/60">Trabalhamos apenas com componentes homologados para máxima durabilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="solucoes" class="py-24 px-4 md:px-6 bg-cloud text-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-charcoal/10 pb-6">
+                <h2 class="font-display font-extrabold text-4xl md:text-5xl uppercase">Nossos Serviços</h2>
+                <a href="https://wa.me/551634157306" class="hidden md:flex font-bold text-red hover:text-red-dark uppercase tracking-widest text-sm items-center gap-2">
+                    Solicitar Orçamento <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                <div class="flex gap-6 group">
+                    <div class="w-16 h-16 bg-charcoal text-red flex items-center justify-center rounded shrink-0 group-hover:bg-red group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-car-battery text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-2xl uppercase mb-3">Baterias de Alta Performance</h3>
+                        <p class="text-charcoal/70 leading-relaxed font-medium">Análise do sistema de carga, verificação de fuga de corrente e substituição por baterias com certificação (incluindo linha Start-Stop e AGM).</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="w-16 h-16 bg-charcoal text-red flex items-center justify-center rounded shrink-0 group-hover:bg-red group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-engine text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-2xl uppercase mb-3">Injeção Eletrônica Avançada</h3>
+                        <p class="text-charcoal/70 leading-relaxed font-medium">Limpeza de bicos injetores por ultrassom, teste de pressão de bomba de combustível e remapeamento básico do módulo.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="w-16 h-16 bg-charcoal text-red flex items-center justify-center rounded shrink-0 group-hover:bg-red group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-headlights text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-2xl uppercase mb-3">Sistemas de Iluminação</h3>
+                        <p class="text-charcoal/70 leading-relaxed font-medium">Troca e regulagem de faróis, resolução de curtos no chicote, instalação de kits LED automotivos originais.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="w-16 h-16 bg-charcoal text-red flex items-center justify-center rounded shrink-0 group-hover:bg-red group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-plug text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-2xl uppercase mb-3">Motor de Partida & Alternador</h3>
+                        <p class="text-charcoal/70 leading-relaxed font-medium">Recondicionamento completo de alternadores e motores de partida, garantindo arranques perfeitos em qualquer condição.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="feedback" class="py-24 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-extrabold text-4xl uppercase mb-16 text-center text-red">Comunidade Estrela</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-zinc p-8 relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-red opacity-50 font-serif">"</div>
+                    <p class="text-cloud/80 font-medium mb-6 relative z-10 text-lg">"Muito atenciosos! Explicaram qual era o problema no alternador com total transparência e resolveram rápido."</p>
+                    <p class="font-display font-bold uppercase tracking-widest text-sm">— Cliente Satisfeito</p>
+                </div>
+                <div class="bg-zinc p-8 relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-red opacity-50 font-serif">"</div>
+                    <p class="text-cloud/80 font-medium mb-6 relative z-10 text-lg">"O scanner deles detectou um erro que duas outras oficinas não tinham visto. Trabalho perfeito de injeção."</p>
+                    <p class="font-display font-bold uppercase tracking-widest text-sm">— Cliente Satisfeito</p>
+                </div>
+                <div class="bg-zinc p-8 relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-red opacity-50 font-serif">"</div>
+                    <p class="text-cloud/80 font-medium mb-6 relative z-10 text-lg">"Tive uma pane elétrica e fui na Estrela por indicação. Serviço de primeira linha, preço justo e local muito limpo."</p>
+                    <p class="font-display font-bold uppercase tracking-widest text-sm">— Cliente Satisfeito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="local" class="py-24 px-4 md:px-6 bg-red text-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+            <div class="md:w-1/2">
+                <h2 class="font-display font-extrabold text-5xl uppercase leading-[0.9] mb-8">Ponto de <br/>Acesso.</h2>
+                <div class="mb-8">
+                    <p class="text-lg font-bold uppercase tracking-widest opacity-80 mb-2">Onde Estamos</p>
+                    <p class="text-xl">Av. Bruno Ruggiero Filho, 1124<br>Parque Santa Felicia Jardim<br>São Carlos - SP, 13562-420</p>
+                </div>
+                <div class="mb-10">
+                    <p class="text-lg font-bold uppercase tracking-widest opacity-80 mb-2">Linha Direta</p>
+                    <p class="text-3xl font-display font-bold">(16) 3415-7306</p>
+                </div>
+                <a href="https://wa.me/551634157306" class="inline-flex bg-charcoal text-white px-8 py-4 font-display font-bold uppercase text-lg hover:bg-white hover:text-red transition-colors skew-x-[-10deg] shadow-xl">
+                    <span class="skew-x-[10deg]">Abrir WhatsApp</span>
+                </a>
+            </div>
+            <div class="md:w-1/2 w-full h-[450px] bg-zinc border-4 border-charcoal">
+                <iframe src="https://maps.google.com/maps?q=Av.%20Bruno%20Ruggiero%20Filho,%201124%20-%20Parque%20Santa%20Felicia%20Jardim,%20S%C3%A3o%20Carlos&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-cloud/40 py-8 px-4 md:px-6 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Auto Elétrico Estrela. Acelere com Segurança.</p>
+            <p class="text-xs">Prévia conceitual produzida por Antigravity AI. Não é um site oficial.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Bar -->
+    <div id="floating-bar" class="floating-bar pt-24 pb-8 px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-6 border-t border-zinc">
+        <p class="font-display font-bold text-xl md:text-2xl uppercase tracking-tighter text-white">
+            Para mais informações entre em contato:
+        </p>
+        <a href="https://wa.me/551634157306" class="bg-red text-white px-8 py-3 font-display font-bold uppercase text-xl shadow-[6px_6px_0px_#B71C1C] hover:-translate-y-1 transition-all skew-x-[-10deg]">
+            <span class="skew-x-[10deg] block">(16) 3415-7306</span>
+        </a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const threshold = document.body.offsetHeight - 800;
+            if (scrollPosition > threshold) {
+                document.getElementById('floating-bar').classList.add('show');
+            } else {
+                document.getElementById('floating-bar').classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
